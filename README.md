@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Life Hacks - Social App
 
-## Getting Started
+Life Hacks is a full‑stack social application built with **Next.js**, **PostgreSQL**, and **Clerk** for authentication. Users can browse posts, filter by category, create their own posts, edit their profile, and leave comments.
 
-First, run the development server:
+## Features
+- Sign up and sign in with **Clerk authentication**
+- User profiles with editable bios
+- Browse posts and filter by category (Productivity, Health, Education, Finance)
+- Create new posts with a title, content, and category
+- View posts on individual pages
+- Add comments to posts
+- Delete posts (server actions handle this securely)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Components
+- **Header.jsx** – Global navigation bar with links to Home, Posts, Categories, About, and user profile/sign in
+- **EditBio.jsx** – Form for updating user biography
+- **Comments.jsx** – Displays all comments for a post
+- **AddComment.jsx** – Form to submit a new comment
+- **DeleteButton.jsx** – Handles deleting posts
+- **User pages** – `/users/you` for the logged-in user
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How it works
+- Uses the **Next.js App Router**, mapping folders directly to routes
+- **PostgreSQL** stores users, posts, and comments
+- **Clerk** manages authentication, ensuring only signed-in users can create posts or edit their bio
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## What I learned
+- Setting up user authentication with Clerk in Next.js
+- Creating user profiles and associating posts with users
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Things I found difficult
+- Integrating Clerk authentication with the database
+- Passing the Clerk user to database queries
+- Managing database relationships between users, posts, and comments
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## How to run it
+- Clone the repository
+- Install the dependencies with `npm install`
+- Run server with `npm run dev`
+- Open in browser at `http://localhost:3000`
