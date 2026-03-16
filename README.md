@@ -34,13 +34,10 @@ Life Hacks is a full‑stack social application built with **Next.js**, **Postgr
 - Managing database relationships between users, posts, and comments
 
 ## Future Updates
-
-### While this version of Life Hacks covers the core functionality—creating posts, editing your bio, and viewing your own profile—there are several additional features planned for future updates:
+While this version of Life Hacks covers the core functionality, things like creating posts, editing your bio, and viewing your own profile, there are several additional features planned for future updates:
 
 -Edit the content of posts after submission to correct mistakes or add information.
-
 -View other users’ profiles directly from their posts.
-
 -Follow other users and stay updated on their activity.
 
 ## How to run it
